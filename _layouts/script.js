@@ -19,5 +19,5 @@ $(document).ready(function() {
   });
 });
 
-document.getElementsByTagName('h1').classList.add("title");
-document.getElementById('site-title').classList.remove("title");
+document.getElementsByTagName("h1").classList.add("title");
+document.getElementById("site-title").classList.remove("title");
