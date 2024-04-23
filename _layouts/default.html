@@ -12,7 +12,7 @@
     <header>
       <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="/">
+          <a class="navbar-item" href="/blog/">
             <h1 id="site-title" class="blog-name">Naochan's blog</h1>
           </a>
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -25,7 +25,7 @@
         <div class="navbar-menu" id="navMenu">
           <div class="navbar-start">
             <a class="navbar-item" href="/">
-              home | ホーム
+              website home | Webサイト ホーム
             </a>
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
@@ -35,7 +35,7 @@
                 <a class="navbar-item" href="/about/me/">
                   about me | 自己紹介
                 </a>
-                <a class="navbar-item" href="/about/site/">
+                <a class="navbar-item" href="/blog/about/">
                   about this site | このサイトについて
                 </a>
               </div>
@@ -71,9 +71,10 @@
     <footer class="footer">
       <div class="box">
         <p class="subtitle">
-          Naochan's website
+          Naochan's blog
         </p>
         <p>(this site useing <a href="https://bulma.io">Bulma</a>)</p>
+        <p><a style="color:black;" href="https://naochan83275.github.io/apple-blog/">(分室「Apple Blog」はこちら)</a></p>
         <small>&copy; 2024 Naochan83275</small>
       </div>
     </footer>
@@ -98,11 +99,10 @@ $(document).ready(function() {
 
   });
 });
-
-$(function () {
+$(function() {
  $('h1').addclass('title');
  $('h2').addclass('subtitle');
- $(".blog-name").removeclass('title')
+ $(".blog-name").removeclass('title');
 });
     </script>
   </body>
