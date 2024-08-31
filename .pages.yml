@@ -46,7 +46,7 @@ content:
         label: Preview image
         type: image
         description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
-  - name: config
+  - name: config2
     label: Jekyll config(text)
     path: _config.yml
     type: file
