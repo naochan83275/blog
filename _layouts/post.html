@@ -18,9 +18,9 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subtitle">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
+            <span class="meta">投稿者: 
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
+              <br>投稿日時: {{ page.date | date: '%Y/%m/%d' }} &middot; {% include read_time.html
               content=page.content %}
             </span>
           </div>
