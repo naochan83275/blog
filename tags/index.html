@@ -1,0 +1,38 @@
+---
+layout: page
+title: タグ別に見る
+background: '/img/bg-post.jpg'
+---
+<ul class="box">
+  <p class="subtitle">タグ一覧</p>
+  {% for tag in site.tags %}
+    <li><a href="#{{ tag[0] }}">{{ tag[0] }}</a></li>
+  {% endfor %}
+</ul>
+
+{% for tag in site.tags %}
+<div class="box">
+  <p class="subtitle" id="{{ tag[0] }}">{{ tag[0] }}</p>
+    {% for post in tag[1] %}
+      <article class="post-preview box">
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+          <p class="title 4">{{ post.title }}</p>
+          {% if post.subtitle %}
+          <p class="subtitle 6">{{ post.subtitle }}</p>
+          {% else %}
+          <p class="subtitle 6">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+          {% endif %}
+        </a>
+        <br>
+        <p class="post-meta">投稿者: 
+        {% if post.author %}
+        {{ post.author }}
+        {% else %}
+        {{ site.author }}
+        {% endif %}
+        <br>投稿日時: {{ post.date | date: '%Y/%m/%d' }} &middot; {% include read_time.html content=post.content %}
+        </p>
+      </article>
+    {% endfor %}
+{% endfor %}
+</div>
