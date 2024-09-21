@@ -29,20 +29,21 @@ layout: default
 
   <div class="">
     <div class="row">
-      <div class="box">
+      <div class="content box">
 
         {{ content }}
 
         <!-- Home Post List -->
+        <h2>最新の投稿</h2>
         {% for post in site.posts limit : 5 %}
         <div class="box">
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="subtitle">{{ post.title }}</h2>
+            <p class="subtitle">{{ post.title }}</p>
             {% if post.subtitle %}
-            <h3 class="subtitle 6">{{ post.subtitle }}</h3>
+            <p class="subtitle 6">{{ post.subtitle }}</p>
             {% else %}
-            <h3 class="subtitle 6">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            <p class="subtitle 6">{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
             {% endif %}
           </a>
           <p class="post-meta">投稿者: 
