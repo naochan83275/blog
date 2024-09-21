@@ -51,8 +51,9 @@ layout: default
             {% else %}
             {{ site.author }}
             {% endif %}
+            <br>
              投稿日時: 
-            {{ post.date | date: '%Y/%B/%d' }} &middot; {% include read_time.html content=post.content %}            
+            {{ post.date | date: '%Y/%M/%d' }} &middot; {% include read_time.html content=post.content %}            
           </p>
         </article>
         </div>
