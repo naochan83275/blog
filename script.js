@@ -18,3 +18,16 @@ $(document).ready(function() {
 
   });
 });
+
+var _h2 = document.getElementsByTagName("h2");
+for(var i = 0; i < _h2.length; ++i){
+    _h2[i].classList.add("Title", "4");
+}
+var _h3 = document.getElementsByTagName("h3");
+for(var i = 0; i < _h3.length; ++i){
+    _h2[i].classList.add("Title", "5");
+}
+var _h4 = document.getElementsByTagName("h4");
+for(var i = 0; i < _h4.length; ++i){
+    _h2[i].classList.add("Title", "6");
+}
