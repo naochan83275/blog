@@ -31,7 +31,7 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-8 col-md-10 mx-auto box">
 
         {{ content }}
 
@@ -40,12 +40,12 @@ layout: default
         <div class="clearfix">
 
           {% if page.previous.url %}
-          <a class="button is-info" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
-              Post</span></a>
+          <a class="button is-info" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; 前の<span class="d-none d-md-inline">
+              投稿</span></a>
           {% endif %}
           {% if page.next.url %}
-          <a class="button is-info" style="text-align: right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-              Post</span> &rarr;</a>
+          <a class="button is-info" style="text-align: right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">次の<span class="d-none d-md-inline">
+              投稿</span> &rarr;</a>
           {% endif %}
 
         </div>
