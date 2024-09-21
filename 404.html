@@ -1,0 +1,134 @@
+---
+layout: html_page
+---
+<!DOCTYPE html>
+<html lang="ja" class="has-navbar-fixed-top" id="html">
+  <head id="_header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title id="tabtitle">
+      404 not found | naochan's website
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <h1>Naochan's website</h1>
+          </a>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="/">
+              home | ホーム
+            </a>
+            <a class="navbar-item" href="/blog/">
+              blog | ブログ
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                about
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="/about/me/">
+                  about me | 自己紹介
+                </a>
+                <a class="navbar-item" href="/about/website/">
+                  about this site | このサイトについて
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                ライトモード/ダークモード 切り替え
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="javascript:change_theme('theme-light')">
+                  ライトモード | light
+                </a>
+                <a class="navbar-item" href="javascript:change_theme('theme-dark')">
+                  ダークモード | dark
+                </a>
+                <a class="navbar-item" href="javascript:change_theme('system')">
+                  システムに合わせる | system
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <div class="box">
+      <p class="title">
+        404 not found
+      </p>
+      <p id="msg">
+        ファイルが見つかりませんでした。<br>
+        URLをもう一度お確かめください。<br>
+        <br>
+        <a href="/">
+          →トップページに戻る
+        </a>
+      </p>
+      <br>
+      <details>
+        <summary>詳細を見る</summary>
+        <table class="table is-fullwidth">
+          <tr>
+            <th>項目</th>
+            <th>内容</th>
+          </tr>
+          <tr>
+            <td>エラーコード</td>
+            <td>404</td>
+          </tr>
+          <tr>
+            <td>発生理由</td>
+            <td>ファイルが存在しないか、URLが誤っています</td>
+          </tr>
+          <tr>
+            <td>URL</td>
+            <td id="URL">Error: Javascript disabled</td>
+          </tr>
+          <tr>
+            <td>エラーの発生時刻</td>
+            <td id="TIME">Error: Javascript disabled</td>
+          </tr>
+        </table>
+      </details>
+    </div>
+    <footer class="footer">
+      <div class="box">
+        <p class="subtitle">
+          Naochan's website
+        </p>
+        <p>(this site useing <a href="https://bulma.io">Bulma</a>)</p>
+        <small>&copy; 2024 Naochan83275</small>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("URL").innerHTML = window.location.href;
+      var date = new Date();
+      var nowtime = date.getFullYear() + '/' + ('0' + (date.getMonth() + 1)).slice(-2) + '/' +('0' + date.getDate()).slice(-2) + ' ' +  ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2) + '.' + date.getMilliseconds();
+      document.getElementById("TIME").innerHTML = nowtime;
+    </script>
+    <script type="module">
+      import text from "/include/import.js?path=/include/cloudflare-analytics";
+      document.getElementById('_header').innerHTML = document.getElementById('_header').innerHTML + text;
+    </script>
+  </body>
+</html>
