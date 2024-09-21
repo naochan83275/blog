@@ -5,15 +5,15 @@ layout: default
 <div>
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
-  <header class="masthead">
+  <header class="">
     {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading box">
+    <div class=""></div>
+    <div class="">
+      <div class="">
+        <div class="">
+          <div class="box">
             <h1 class="title">{{ page.title }}</h1>
             {% if page.subtitle %}
             <h2 class="subtitle">{{ page.subtitle }}</h2>
@@ -28,16 +28,16 @@ layout: default
       </div>
     </div>
   </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto box">
+  <br>
+  <div class="">
+    <div class="">
+      <div class="content box">
 
         {{ content }}
 
         <hr>
 
-        <div class="clearfix">
+        <div class="">
 
           {% if page.previous.url %}
           <a class="button is-info" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; 前の<span class="d-none d-md-inline">
